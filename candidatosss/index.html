@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VORTEX | Gobierno Escolar</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="estilos.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ==========================================
+         INICIO DE SESIÓN
+    =========================================== -->
+
+    <section id="loginPage" class="login-page">
+
+        <div class="login-brand">
+
+            <div class="logo">
+                <span class="logo-symbol">◉</span>
+                VORTEX
+            </div>
+
+            <h1>Tu voz también cuenta</h1>
+
+            <p>
+                Sistema de información para la gestión del gobierno escolar.
+                Vota, participa y construye un mejor colegio.
+            </p>
+
+            <div class="login-beneficios">
+
+                <div>
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Seguro</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-eye"></i>
+                    <span>Transparente</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-bolt"></i>
+                    <span>Rápido</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- TARJETA LOGIN -->
+
+        <div class="login-card">
+
+            <div class="logo logo-azul">
+                <span class="logo-symbol">◉</span>
+                VORTEX
+            </div>
+
+            <h2>Iniciar sesión</h2>
+
+            <p class="texto-ayuda">
+                Ingresa tus datos para acceder a tu cuenta
+            </p>
+
+
+            <form id="loginForm">
+
+                <!-- CORREO -->
+
+                <label for="correo">
+                    Correo electrónico
+                </label>
+
+                <div class="input-box">
+
+                    <i class="fa-regular fa-envelope"></i>
+
+                    <input
+                        type="email"
+                        id="correo"
+                        placeholder="Correo electrónico"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- CONTRASEÑA -->
+
+                <label for="password">
+                    Contraseña
+                </label>
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Contraseña"
+                        autocomplete="current-password"
+                        required
+                    >
+
+                    <i
+                        class="fa-regular fa-eye"
+                        id="mostrarPassword"
+                        style="cursor:pointer;"
+                    ></i>
+
+                </div>
+
+
+                <!-- TIPO DE USUARIO -->
+
+                <label for="tipoUsuario">
+                    Tipo de usuario
+                </label>
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    <select id="tipoUsuario" required>
+
+                        <option value="">
+                            Selecciona una opción
+                        </option>
+
+                        <option value="estudiante">
+                            Estudiante
+                        </option>
+
+                        <option value="profesor">
+                            Profesor
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- BOTÓN -->
+
+                <button
+                    class="btn-principal"
+                    type="submit"
+                >
+                    Ingresar
+                </button>
+
+            </form>
+
+
+            <!-- MENSAJE LOGIN -->
+
+            <p
+                id="mensajeLogin"
+                class="mensaje-login"
+            ></p>
+
+
+            <p class="registrarse">
+
+                ¿No tienes una cuenta?
+
+                <a
+                    href="#"
+                    onclick="mostrarRegistro(); return false;"
+                >
+                    Regístrate
+                </a>
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         REGISTRO
+    =========================================== -->
+
+    <section
+        id="registroPage"
+        class="login-page oculto"
+    >
+
+        <div class="login-brand">
+
+            <div class="logo">
+                <span class="logo-symbol">◉</span>
+                VORTEX
+            </div>
+
+            <h1>Crea tu cuenta</h1>
+
+            <p>
+                Regístrate para participar en las elecciones escolares.
+            </p>
+
+        </div>
+
+
+        <div class="login-card">
+
+            <div class="logo logo-azul">
+                <span class="logo-symbol">◉</span>
+                VORTEX
+            </div>
+
+            <h2>Crear cuenta</h2>
+
+            <p class="texto-ayuda">
+                Completa la información para registrarte
+            </p>
+
+
+            <form id="registroForm">
+
+                <label>Nombres</label>
+
+                <div class="input-box">
+
+                    <i class="fa-regular fa-user"></i>
+
+                    <input
+                        type="text"
+                        placeholder="Nombres"
+                        required
+                    >
+
+                </div>
+
+
+                <label>Apellidos</label>
+
+                <div class="input-box">
+
+                    <i class="fa-regular fa-user"></i>
+
+                    <input
+                        type="text"
+                        placeholder="Apellidos"
+                        required
+                    >
+
+                </div>
+
+
+                <label>Correo electrónico</label>
+
+                <div class="input-box">
+
+                    <i class="fa-regular fa-envelope"></i>
+
+                    <input
+                        type="email"
+                        placeholder="Correo electrónico"
+                        required
+                    >
+
+                </div>
+
+
+                <label>Curso</label>
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-school"></i>
+
+                    <select required>
+
+                        <option value="">
+                            Selecciona tu curso
+                        </option>
+
+                        <option>6°</option>
+                        <option>7°</option>
+                        <option>8°</option>
+                        <option>9°</option>
+                        <option>10°</option>
+                        <option>11°</option>
+
+                    </select>
+
+                </div>
+
+
+                <label>Contraseña</label>
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    <input
+                        type="password"
+                        placeholder="Contraseña"
+                        required
+                    >
+
+                </div>
+
+
+                <button
+                    class="btn-principal"
+                    type="submit"
+                >
+                    Registrarse
+                </button>
+
+            </form>
+
+
+            <p class="registrarse">
+
+                ¿Ya tienes una cuenta?
+
+                <a
+                    href="#"
+                    onclick="mostrarLogin(); return false;"
+                >
+                    Inicia sesión
+                </a>
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         PANEL DEL ESTUDIANTE
+    =========================================== -->
+
+    <section
+        id="studentPanel"
+        class="app oculto"
+    >
+
+        <aside class="sidebar">
+
+            <div class="logo logo-sidebar">
+
+                <span class="logo-symbol">◉</span>
+                VORTEX
+
+            </div>
+
+
+            <div class="user-sidebar">
+
+                <div class="avatar">
+                    NN
+                </div>
+
+                <div>
+
+                    <strong>
+                        Nicolay Nagles
+                    </strong>
+
+                    <small>
+                        Estudiante
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <nav class="sidebar-menu">
+
+                <a
+                    href="#"
+                    class="active"
+                    onclick="studentSection('inicioEstudiante', this); return false;"
+                >
+
+                    <i class="fa-solid fa-house"></i>
+
+                    Inicio
+
+                </a>
+
+
+                <a
+                    href="#"
+                    onclick="studentSection('votarEstudiante', this); return false;"
+                >
+
+                    <i class="fa-solid fa-check-to-slot"></i>
+
+                    Votar
+
+                </a>
+
+
+                <a
+                    href="#"
+                    onclick="studentSection('propuestasEstudiante', this); return false;"
+                >
+
+                    <i class="fa-regular fa-file-lines"></i>
+
+                    Propuestas
+
+                </a>
+
+
+                <a
+                    href="#"
+                    onclick="studentSection('perfilEstudiante', this); return false;"
+                >
+
+                    <i class="fa-solid fa-user"></i>
+
+                    Perfil
+
+                </a>
+
+            </nav>
+
+
+            <button
+                class="logout"
+                onclick="cerrarSesion()"
+            >
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Cerrar sesión
+
+            </button>
+
+        </aside>
+
+
+        <main class="main-content">
+
+            <header class="topbar">
+
+                <span></span>
+
+                <div class="top-user">
+
+                    <div class="avatar small">
+                        NN
+                    </div>
+
+                    <span>
+                        Hola, Nicolay Nagles
+                    </span>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </div>
+
+            </header>
+
+
+            <!-- INICIO -->
+
+            <section
+                id="inicioEstudiante"
+                class="content-section"
+            >
+
+                <h1>
+                    Bienvenido, Nicolay
+                </h1>
+
+                <p class="description">
+                    Consulta las propuestas y participa en la elección de personero.
+                </p>
+
+
+                <div class="election-banner">
+
+                    <div class="election-icon">
+                        🗳️
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Elección de Personero Estudiantil
+                        </h3>
+
+                        <p>
+                            Tu voto es importante. ¡Participa!
+                        </p>
+
+                    </div>
+
+                    <span class="status">
+                        En curso
+                    </span>
+
+                    <small>
+                        Elecciones escolares
+                    </small>
+
+                </div>
+
+
+                <h2 class="section-title">
+                    Candidatos
+                </h2>
+
+
+                <div class="candidate-grid">
+
+
+                    <article class="candidate-card">
+
+                        <span class="candidate-number">
+                            #1
+                        </span>
+
+                        <div class="candidate-image">
+                            👩🏻
+                        </div>
+
+                        <h3>
+                            Laura García
+                        </h3>
+
+                        <p>
+                            “Más participación, mejores cambios”
+                        </p>
+
+                        <button
+                            onclick="studentSection('propuestasEstudiante')"
+                        >
+                            Ver propuestas
+                        </button>
+
+                    </article>
+
+
+                    <article class="candidate-card">
+
+                        <span class="candidate-number">
+                            #2
+                        </span>
+
+                        <div class="candidate-image">
+                            👨🏻
+                        </div>
+
+                        <h3>
+                            Daniel Torres
+                        </h3>
+
+                        <p>
+                            “Escuchar, gestionar, lograr”
+                        </p>
+
+                        <button
+                            onclick="studentSection('propuestasEstudiante')"
+                        >
+                            Ver propuestas
+                        </button>
+
+                    </article>
+
+
+                    <article class="candidate-card">
+
+                        <span class="candidate-number">
+                            #3
+                        </span>
+
+                        <div class="candidate-image">
+                            👩🏽
+                        </div>
+
+                        <h3>
+                            Valentina Ríos
+                        </h3>
+
+                        <p>
+                            “Un colegio con más opciones”
+                        </p>
+
+                        <button
+                            onclick="studentSection('propuestasEstudiante')"
+                        >
+                            Ver propuestas
+                        </button>
+
+                    </article>
+
+
+                </div>
+
+
+                <button
+                    class="btn-principal vote-button"
+                    onclick="studentSection('votarEstudiante')"
+                >
+                    Votar ahora
+                </button>
+
+            </section>
+
+
+            <!-- ==========================================
+                 VOTACIÓN
+            =========================================== -->
+
+            <section
+                id="votarEstudiante"
+                class="content-section oculto"
+            >
+
+                <h1>
+                    Vota por tu candidato
+                </h1>
+
+                <p class="description">
+                    Selecciona el candidato de tu preferencia.
+                </p>
+
+
+                <form id="voteForm">
+
+                    <div class="vote-grid">
+
+
+                        <label class="vote-card">
+
+                            <input
+                                type="radio"
+                                name="candidate"
+                                value="Laura García"
+                            >
+
+                            <div class="candidate-image">
+                                👩🏻
+                            </div>
+
+                            <h3>
+                                Laura García
+                            </h3>
+
+                            <span>
+                                #1
+                            </span>
+
+                        </label>
+
+
+                        <label class="vote-card">
+
+                            <input
+                                type="radio"
+                                name="candidate"
+                                value="Daniel Torres"
+                            >
+
+                            <div class="candidate-image">
+                                👨🏻
+                            </div>
+
+                            <h3>
+                                Daniel Torres
+                            </h3>
+
+                            <span>
+                                #2
+                            </span>
+
+                        </label>
+
+
+                        <label class="vote-card">
+
+                            <input
+                                type="radio"
+                                name="candidate"
+                                value="Valentina Ríos"
+                            >
+
+                            <div class="candidate-image">
+                                👩🏽
+                            </div>
+
+                            <h3>
+                                Valentina Ríos
+                            </h3>
+
+                            <span>
+                                #3
+                            </span>
+
+                        </label>
+
+
+                    </div>
+
+
+                    <button
+                        class="btn-principal confirm-vote"
+                        type="submit"
+                    >
+                        Confirmar voto
+                    </button>
+
+
+                    <p class="vote-warning">
+
+                        <i class="fa-solid fa-circle-info"></i>
+
+                        Una vez confirmado, no podrás cambiar tu voto.
+
+                    </p>
+
+                </form>
+
+
+                <div id="voteMessage"></div>
+
+            </section>
+
+
+            <!-- ==========================================
+                 PROPUESTAS
+            =========================================== -->
+
+            <section
+                id="propuestasEstudiante"
+                class="content-section oculto"
+            >
+
+                <h1>
+                    Propuestas de los candidatos
+                </h1>
+
+                <p class="description">
+                    Conoce las ideas de cada candidato.
+                </p>
+
+
+                <div class="proposal-list">
+
+
+                    <article class="proposal">
+
+                        <div class="candidate-image">
+                            👩🏻
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Laura García
+                            </h3>
+
+                            <p>
+                                • Mejorar los espacios deportivos.
+                            </p>
+
+                            <p>
+                                • Realizar actividades culturales.
+                            </p>
+
+                            <p>
+                                • Mejorar la comunicación estudiantil.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="proposal">
+
+                        <div class="candidate-image">
+                            👨🏻
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Daniel Torres
+                            </h3>
+
+                            <p>
+                                • Crear más zonas de estudio.
+                            </p>
+
+                            <p>
+                                • Apoyar el bienestar emocional.
+                            </p>
+
+                            <p>
+                                • Mejorar el transporte escolar.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="proposal">
+
+                        <div class="candidate-image">
+                            👩🏽
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Valentina Ríos
+                            </h3>
+
+                            <p>
+                                • Crear talleres extracurriculares.
+                            </p>
+
+                            <p>
+                                • Promover el cuidado ambiental.
+                            </p>
+
+                            <p>
+       

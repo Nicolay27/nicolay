@@ -1,0 +1,629 @@
+root {
+    --azul-oscuro: #031d38;
+    --azul-sidebar: #032c50;
+    --azul: #1255d9;
+    --azul-claro: #edf4ff;
+    --gris-fondo: #f4f7fb;
+    --texto: #102747;
+    --gris-texto: #687991;
+    --blanco: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--texto);
+    background: var(--gris-fondo);
+}
+
+button,
+input,
+select {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.oculto {
+    display: none !important;
+}
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo-symbol {
+    color: #1c67eb;
+    font-size: 40px;
+}
+
+.logo-azul {
+    color: var(--azul-oscuro);
+}
+
+/* LOGIN */
+
+.login-page {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    background: var(--gris-fondo);
+}
+
+.login-brand {
+    padding: 80px 12%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(2, 29, 62, .98),
+            rgba(4, 58, 130, .86)
+        ),
+        url("https://images.unsplash.com/photo-1562774053-701939374585")
+        center/cover;
+}
+
+.login-brand h1 {
+    margin-top: 80px;
+    margin-bottom: 15px;
+    font-size: 46px;
+}
+
+.login-brand p {
+    max-width: 450px;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.login-beneficios {
+    max-width: 500px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.login-beneficios div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.login-beneficios i {
+    color: #3e8aff;
+    font-size: 22px;
+}
+
+.login-card {
+    width: 430px;
+    max-width: 90%;
+    margin: auto;
+    padding: 38px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px #17365d1c;
+}
+
+.login-card h2 {
+    margin-top: 40px;
+    margin-bottom: 8px;
+    text-align: center;
+    font-size: 27px;
+}
+
+.texto-ayuda {
+    margin-bottom: 28px;
+    text-align: center;
+    color: var(--gris-texto);
+    font-size: 13px;
+}
+
+.login-card label {
+    display: block;
+    margin: 14px 0 6px;
+    color: var(--texto);
+    font-size: 13px;
+}
+
+.input-box {
+    height: 46px;
+    padding: 0 13px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #d8e1ec;
+    border-radius: 7px;
+}
+
+.input-box i {
+    color: #183963;
+}
+
+.input-box input,
+.input-box select {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    color: var(--texto);
+    background: transparent;
+}
+
+.btn-principal {
+    width: 100%;
+    margin-top: 24px;
+    padding: 14px;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    background-color: var(--azul);
+    font-weight: bold;
+}
+
+.btn-principal:hover {
+    background-color: #0b3fa9;
+}
+
+.registrarse {
+    margin-top: 25px;
+    text-align: center;
+    color: var(--gris-texto);
+    font-size: 13px;
+}
+
+.registrarse a {
+    color: var(--azul);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.mensaje-login {
+    text-align: center;
+    color: #bb2638;
+    font-size: 13px;
+}
+
+
+.app {
+    min-height: 100vh;
+    display: flex;
+}
+
+.sidebar {
+    width: 235px;
+    min-height: 100vh;
+    padding: 25px 15px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, #032c50, #001d37);
+}
+
+.logo-sidebar {
+    margin-bottom: 35px;
+}
+
+.user-sidebar {
+    padding: 15px 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    border-bottom: 1px solid #ffffff24;
+}
+
+.user-sidebar small {
+    display: block;
+    margin-top: 4px;
+    color: #adc0d5;
+    font-size: 11px;
+}
+
+.avatar {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--azul-oscuro);
+    background: white;
+    font-weight: bold;
+}
+
+.avatar.small {
+    width: 30px;
+    height: 30px;
+    font-size: 11px;
+}
+
+.avatar.large {
+    width: 90px;
+    height: 90px;
+    margin: auto;
+    font-size: 25px;
+}
+
+.sidebar-menu {
+    margin-top: 25px;
+}
+
+.sidebar-menu a,
+.logout {
+    width: 100%;
+    padding: 14px 10px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    background: transparent;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.sidebar-menu a:hover,
+.sidebar-menu a.active {
+    background: var(--azul);
+}
+
+.logout {
+    margin-top: auto;
+}
+
+.main-content {
+    width: calc(100% - 235px);
+}
+
+.topbar {
+    height: 63px;
+    padding: 0 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    border-bottom: 1px solid #e1e7ef;
+}
+
+.top-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--texto);
+    font-size: 13px;
+}
+
+.content-section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px;
+}
+
+.content-section h1 {
+    margin-bottom: 7px;
+    font-size: 28px;
+}
+
+.description {
+    color: var(--gris-texto);
+    font-size: 14px;
+}
+
+.election-banner {
+    margin: 26px 0 32px;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    border: 1px solid #cadcf9;
+    border-radius: 9px;
+    background: var(--azul-claro);
+}
+
+.election-icon {
+    font-size: 40px;
+}
+
+.election-banner h3,
+.election-banner p {
+    margin: 5px 0;
+}
+
+.election-banner p,
+.election-banner small {
+    color: var(--gris-texto);
+}
+
+.status {
+    margin-left: auto;
+    padding: 7px 14px;
+    border-radius: 20px;
+    color: white;
+    background: #13c895;
+    font-size: 11px;
+}
+
+.section-title {
+    font-size: 20px;
+}
+
+.candidate-grid,
+.vote-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.candidate-card,
+.vote-card {
+    position: relative;
+    padding: 22px;
+    text-align: center;
+    border: 1px solid #dce5ef;
+    border-radius: 9px;
+    background: white;
+    transition: .3s;
+}
+
+.candidate-card:hover,
+.vote-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px #1b579b19;
+}
+
+.candidate-number {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 5px 8px;
+    color: var(--azul);
+    border-radius: 15px;
+    background: var(--azul-claro);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.candidate-image {
+    width: 75px;
+    height: 75px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #e6edf7;
+    font-size: 43px;
+}
+
+.candidate-card h3,
+.vote-card h3 {
+    font-size: 16px;
+}
+
+.candidate-card p {
+    min-height: 37px;
+    color: var(--gris-texto);
+    font-size: 12px;
+}
+
+.candidate-card button {
+    width: 100%;
+    padding: 9px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background: var(--azul);
+}
+
+.vote-card {
+    cursor: pointer;
+}
+
+.vote-card input {
+    accent-color: var(--azul);
+}
+
+.vote-card:has(input:checked) {
+    border: 2px solid var(--azul);
+    background: #f1f6ff;
+}
+
+.vote-card span {
+    color: var(--azul);
+    font-weight: bold;
+}
+
+.vote-button {
+    width: 220px;
+    display: block;
+    margin: 30px auto;
+}
+
+.confirm-vote {
+    margin-top: 25px;
+}
+
+.vote-warning {
+    text-align: center;
+    color: var(--gris-texto);
+    font-size: 12px;
+}
+
+.proposal-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.proposal {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    border-radius: 9px;
+    background: white;
+}
+
+.proposal h3 {
+    margin-top: 0;
+}
+
+.proposal p {
+    color: var(--gris-texto);
+    font-size: 14px;
+}
+
+.profile-card {
+    max-width: 400px;
+    padding: 35px;
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+}
+
+.results-card {
+    max-width: 800px;
+    margin-top: 30px;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px #1d487b12;
+}
+
+.result-row {
+    margin-bottom: 25px;
+}
+
+.result-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.progress {
+    height: 25px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #e3eaf3;
+}
+
+.progress div {
+    width: 0%;
+    height: 100%;
+    border-radius: 20px;
+    background: var(--azul);
+    transition: width .5s;
+}
+
+.total-votes {
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+    text-align: right;
+}
+
+.success-message {
+    margin-top: 22px;
+    padding: 15px;
+    text-align: center;
+    color: #087345;
+    border-radius: 8px;
+    background: #d9f8e9;
+}
+
+.error-message {
+    margin-top: 22px;
+    padding: 15px;
+    text-align: center;
+    color: #8b1d2c;
+    border-radius: 8px;
+    background: #fbdde1;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .login-page {
+        grid-template-columns: 1fr;
+    }
+
+    .login-brand {
+        min-height: 350px;
+        padding: 45px 10%;
+    }
+
+    .login-brand h1 {
+        margin-top: 35px;
+    }
+
+    .login-beneficios {
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 700px) {
+    .sidebar {
+        width: 70px;
+        padding: 18px 8px;
+    }
+
+    .logo-sidebar {
+        justify-content: center;
+        font-size: 0;
+    }
+
+    .user-sidebar div:last-child,
+    .sidebar-menu a,
+    .logout {
+        font-size: 0;
+    }
+
+    .sidebar-menu a,
+    .logout {
+        justify-content: center;
+    }
+
+    .sidebar-menu i,
+    .logout i {
+        font-size: 17px;
+    }
+
+    .main-content {
+        width: calc(100% - 70px);
+    }
+
+    .content-section {
+        padding: 25px 15px;
+    }
+
+    .candidate-grid,
+    .vote-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .election-banner {
+        flex-wrap: wrap;
+    }
+
+    .status {
+        margin-left: 0;
+    }
+}

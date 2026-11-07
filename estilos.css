@@ -1,0 +1,122 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f4f8;
+    color: #222;
+}
+
+header {
+    background: #173b6c;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+.bienvenida,
+.votacion {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.bienvenida h2,
+.votacion h2 {
+    color: #173b6c;
+    margin-bottom: 10px;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.candidatos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.tarjeta {
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.tarjeta:hover {
+    border-color: #173b6c;
+    background: #eef4fc;
+}
+
+.tarjeta input {
+    transform: scale(1.3);
+}
+
+.tarjeta h3 {
+    color: #173b6c;
+    margin-bottom: 5px;
+}
+
+.boton {
+    width: 100%;
+    padding: 15px;
+    background: #173b6c;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background: #0f2b50;
+}
+
+#mensaje {
+    margin: 20px 0;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    background: #173b6c;
+    color: white;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+@media (max-width: 700px) {
+    .candidatos {
+        grid-template-columns: 1fr;
+    }
+}
